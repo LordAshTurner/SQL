@@ -16,3 +16,31 @@ group by rating
 SELECT rating, max(rental_duration), min(rental_duration)
 FROM film
 Group by rating
+
+            The following inquiry was to determine if I had any duplicates. I even double checked through Excel and found the same result. This cleans up the data quality, significantly. 
+CREATE VIEW viewname AS
+SELECT title,
+ release_year,
+ language_id,
+ rental_duration,
+ COUNT(*)
+FROM film
+GROUP BY title,
+ release_year,
+ language_id,
+ rental_duration
+HAVING COUNT(*) >1;
+
+SELECT MIN(rental_rate) AS min_rent,
+ MAX(rental_rate) AS max_rent,
+ AVG(rental_rate) AS avg_rent,
+ COUNT(rental_rate) AS count_rent_values,
+ COUNT(*) AS count_rows
+FROM film;
+
+SELECT MIN(replacement_cost) AS min_replacement_cost,
+ MAX(replacement_cost) AS max_replacement_cost,
+ AVG(replacement_cost) AS avg_replacement_cost,
+ COUNT(replacement_cost) AS count_replacement_cost_values,
+ COUNT(*) AS count_rows
+FROM film;
