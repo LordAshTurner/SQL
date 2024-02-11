@@ -15,3 +15,6 @@ the main questions they’d like to answer:
 ● Which countries are Rockbuster customers based in?
 ● Where are customers with a high lifetime value based?
 ● Do sales figures vary between geographic regions?
+
+![image](https://github.com/LordAshTurner/SQL/assets/159558850/aa3696cd-bfdb-47e9-a99b-84e429321d18)
+![image](https://github.com/LordAshTurner/SQL/assets/159558850/c0fc7804-023f-410b-bfee-a405a3d8da70)
