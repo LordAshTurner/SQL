@@ -1,4 +1,4 @@
-Select
+# Select
 "category_id" "genre" "last_update"
 1 "Action" "2006-02-15 09:46:27"
 2 "Animation" "2006-02-15 09:46:27"
@@ -17,13 +17,13 @@ Select
 15 "Sports" "2006-02-15 09:46:27"
 16 "Travel""2006-02-15 09:46:27"
 
-    Adding genres to the category table 
+# Adding genres to the category table 
 INSERT INTO category
 (name) VALUES ('Thriller'), ('Crime'),('Mystery'),
 ('Romance'), ('War')
 Select * From category
 
-    Adding a film category to the list
+# Adding a film category to the list
 Select *
 From category
 Where genre= 'Thriller';
@@ -32,13 +32,13 @@ UPDATE film_category
 SET category_id = 17
 WHERE film_id= 5;
 
-    Since there are no Mystery movies in the list, delete 'Mystery' category
+# Since there are no Mystery movies in the list, delete 'Mystery' category
 DELETE FROM category
 WHERE genre = 'Mystery';
 SELECT *
 FROM category;
 
-        Write a query to find the top 10 countries for Rockbuster in terms of customer numbers.
+# Write a query to find the top 10 countries for Rockbuster in terms of customer numbers.
 SELECT
  count(B.customer_id) AS customer_count,
  E.Country
