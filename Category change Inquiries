@@ -37,3 +37,16 @@ DELETE FROM category
 WHERE genre = 'Mystery';
 SELECT *
 FROM category;
+
+        Write a query to find the top 10 countries for Rockbuster in terms of customer numbers.
+SELECT
+ count(B.customer_id) AS customer_count,
+ E.Country
+FROM Payment A
+INNER JOIN customer B ON A.customer_id = B.customer_id
+INNER JOIN address C ON B.address_id = C.address_id
+INNER JOIN city D ON C.city_id = D.city_id
+INNER JOIN country E ON D.country_ID = E.country_ID
+Group by D.City, E.Country
+Order by count(B.customer_id) DESC
+Limit 10
