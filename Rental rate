@@ -1,23 +1,23 @@
-      Create only 2 columns, film_id and title
+# Create only 2 columns, film_id and title
 SELECT film_id, title
 FROM film 
 
-    Run a query that selects every film from the “film” table, with the movies sorted by title from A to Z, then by most recent release year, and then by highest to lowest rental rate.
+# Run a query that selects every film from the “film” table, with the movies sorted by title from A to Z, then by most recent release year, and then by highest to lowest rental rate.
 SELECT *
 FROM film
 Order by title asc, release_year desc, rental_rate desc
 
-    What is the average rental rate for each rating category?
+# What is the average rental rate for each rating category?
 SELECT rating, avg(rental_rate)
 FROM film
 group by rating
 
-    What are the minimum and maximum rental durations for each rating category?
+# What are the minimum and maximum rental durations for each rating category?
 SELECT rating, max(rental_duration), min(rental_duration)
 FROM film
 Group by rating
 
-            The following inquiry was to determine if I had any duplicates. I even double checked through Excel and found the same result. This cleans up the data quality, significantly. 
+# The following inquiry was to determine if I had any duplicates. I even double checked through Excel and found the same result. This cleans up the data quality, significantly. 
 CREATE VIEW viewname AS
 SELECT title,
  release_year,
